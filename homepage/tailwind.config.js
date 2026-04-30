@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@theme {
+  --font-sans: "Zen Maru Gothic", sans-serif;
+}
