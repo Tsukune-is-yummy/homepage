@@ -1,0 +1,28 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "> htmlだけで書かれている怪文書  \r 他の知識がないのでとりあえず技術の教科書で覚えたhtmlを使って書いております。\r ## my first homepage\r > Tailwind CSSの使用も検討しています\r あたまがわるいです",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tsukune-is-yummy/homepage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Tsukune-is-yummy/homepage/issues"
+  },
+  "homepage": "https://github.com/Tsukune-is-yummy/homepage#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.2.4"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.2.4",
+    "postcss": "^8.5.13"
+  }
+}
