@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export const runtime = "edge";
 const geistSans = Geist({
@@ -29,26 +30,46 @@ export default function RootLayout({
       lang="ja"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-gray-50 text-gray-900">
+      <body className="min-h-full flex flex-col bg-[#121212] text-gray-200 antialiased">
         {/* --- 固定ヘッダー --- */}
         <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md">
           <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
-            <div className="text-xl font-bold">logo</div>
+            <Link href="/" className="flex items-corner">
+              <Image
+                src="/img/つくねさーばー.webp"
+                alt="つくねさーばーロゴ"
+                width={250}
+                height={88}
+                className="object-countain"
+              />
+            </Link>
             {/* 右側のナビゲーションメニュー */}
             <nav className="flex gap-6 text-sm font-medium">
-              <Link href="/" className="hover:text-blue-600">
+              <Link href="/" className="hover:text-blue-600 transition-colors">
                 トップ
               </Link>
-              <Link href="/blog" className="hover:text-blue-600">
+              <Link
+                href="/blog"
+                className="hover:text-blue-600 transition-colors"
+              >
                 ブログ
               </Link>
-              <Link href="/about" className="hover:text-blue-600">
+              <Link
+                href="/about"
+                className="hover:text-blue-600 transition-colors"
+              >
                 About
               </Link>
-              <Link href="/server" className="hover:text-blue-600">
+              <Link
+                href="/server"
+                className="hover:text-blue-600 transition-colors"
+              >
                 サーバー
               </Link>
-              <Link href="/contact" className="hover:text-blue-600">
+              <Link
+                href="/contact"
+                className="hover:text-blue-600 transition-colors"
+              >
                 Contact
               </Link>
             </nav>
