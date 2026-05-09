@@ -1,16 +1,21 @@
 export const runtime = "edge";
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-extrabold text-blue-600 drop-shadow-md">
-        つくねのホームページ
+    <main className="flex flex-1 flex-col items-center px-4 pt-12">
+      <h1 className="mb-8 text-4xl font-extrabold tracking-tight">
+        つくねサーバー
       </h1>
-      <p className="mt-4 text-lg text-gray-700">
-        Next.jsのプロジェクトで正しく設定されています。
-      </p>
-      <p className="mt-4 text-lg text-emerald-900">
-        CSSがわからないです。CSSべんきょうしてまつ。
-      </p>
-    </div>
+
+      <div className="w-full max-w-3xl rounded-xl border border-gray-700 bg-gray-800/50 p-8 shadow-xl">
+        <div className="min-h-100 text-gray-300">
+          <p className="mt-4 text-lg text-gray-700">
+            Next.js + TailwindCSS/PostCSS
+          </p>
+          <p className="mt-4 text-lg text-emerald-900">
+            CSSがわからないです。CSSべんきょうしてまつ。
+          </p>
+        </div>
+      </div>
+    </main>
   );
 }
