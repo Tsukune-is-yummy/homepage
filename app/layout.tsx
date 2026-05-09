@@ -20,7 +20,7 @@ const linkStyle =
 
 export const metadata: Metadata = {
   title: "Tsukuneserver Home",
-  description: "つくねさーばー　Created With Next.js+TailwindCSS/PostCSS",
+  description: "Tsukune　Server / Created With Next.js+TailwindCSS/PostCSS",
 };
 
 export default function RootLayout({
@@ -33,13 +33,13 @@ export default function RootLayout({
       lang="ja"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased `}
     >
-      <body className="flex flex-col gray-200 text-bg-black antialiased">
+      <body className="flex flex-col bg-gray-200 text-bg-black antialiased">
         {/* --- 固定ヘッダー --- */}
-        <header className="m-4 border-2 border-gray-800 p-4 bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+        <header className="m-4 border-2 border-gray-800 p-4 bg-white shadow-xl/30">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex justify-items-normal">
               <Image
-                src="/newlogo.webp"
+                src="/oldlogo.webp"
                 alt="つくねさーばーロゴ"
                 width={128}
                 height={45}
