@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+import { withVelite } from "velite";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
 };
 
-export default nextConfig;
+// 関数として存在するかチェックしながらエクスポート
+export default typeof withVelite === "function"
+  ? withVelite(nextConfig)
+  : nextConfig;

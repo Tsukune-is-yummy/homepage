@@ -1,0 +1,9 @@
+[
+  {
+    "title": "No.01 初ブログ",
+    "slug": "hello",
+    "date": "2026-05-10T00:00:00.000Z",
+    "content": "<p>Tailwind CSSのてすとでやんす\r\nここから下が本文です！\r\nつくねサーバーの進捗や、PCパーツのカスタマイズについて書いていきます。</p>\n<h2>見出しを作ることもできます</h2>\n<ul>\n<li>箇条書きも</li>\n<li>簡単に</li>\n<li>書けます</li>\n</ul>\n<p><strong>太字</strong>にしたり、<a href=\"https://google.com\">リンク</a>を貼ったりも自由自在です。</p>",
+    "permalink": "/blog/hello"
+  }
+]
