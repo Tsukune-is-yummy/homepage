@@ -34,15 +34,15 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased `}
     >
       <body className="flex flex-col bg-gray-200 text-bg-black antialiased">
-        {/* --- 固定ヘッダー --- */}
+        {/* --- ヘッダー --- */}
         <header className="m-4 border-2 border-gray-800 p-4 bg-white shadow-xl/30">
           <div className="flex justify-between items-center">
-            <Link href="/" className="flex justify-items-normal">
+            <Link href="/" className="flex justify-items-center">
               <Image
                 src="/oldlogo.webp"
-                alt="つくねさーばーロゴ"
-                width={128}
-                height={45}
+                alt="old_tsukuneserver_Logo"
+                width={3000}
+                height={1055}
                 className="h-12.5 w-auto"
               />
             </Link>
@@ -67,7 +67,7 @@ export default function RootLayout({
           </div>
         </header>
 
-        <main className="mx-auto max-w-5xl px-4 py-8">{children}</main>
+        <main className="w-full">{children}</main>
 
         <footer className="border-t bg-white py-10 mt-20">
           <div className="mx-auto max-w-5xl px-4 text-center text-gray-500">
