@@ -27,7 +27,7 @@ const openSans = Open_Sans({
 });
 
 const linkStyle =
-  "border-2 border-white px-4 py-2 text-black no-underline hover:bg-black hover:text-white transition-all font-bold";
+  "border-2 border-gray-800 px-4 py-2 text-white no-underline hover:bg-white hover:text-black transition-all font-bold";
 
 export const metadata: Metadata = {
   title: "Tsukuneserver Home",
@@ -42,16 +42,16 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} ${mochiyPopOne.variable} h-full antialiased `}
+      className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} ${mochiyPopOne.variable} h-full antialiased bg-black text-white selection:bg-amber-950`}
     >
-      <body className="flex flex-col bg-gray-200 text-bg-black antialiased">
+      <body className="bg-gray-800 text-white antialiased border-gray-900">
         {/* --- ヘッダー --- */}
-        <header className="m-4 border-2 border-gray-800 p-4 bg-white shadow-xl/30">
-          <div className="flex justify-between items-center">
-            <Link href="/" className="flex justify-items-center">
+        <header className="border border-gray-900 p-4 bg-gray-800">
+          <div className="flex justify-between items-center bg-gray-800">
+            <Link href="/" className="flex justify-items-center border ">
               <Image
-                src="/oldlogo.webp"
-                alt="old_tsukuneserver_Logo"
+                src="/newlogo.webp"
+                alt="tsukuneserver_Logo"
                 width={3000}
                 height={1055}
                 className="h-12.5 w-auto"
@@ -80,10 +80,10 @@ export default function RootLayout({
 
         <main className="w-full">{children}</main>
 
-        <footer className="border-t bg-gray-100 py-15 mt-40">
-          <div className="mx-auto max-w-5xl px-4 text-center text-gray-500">
+        <footer className="bg-gray-950 py-15">
+          <div className="mx-auto max-w-5xl px-4 text-center text-white">
             <p>© 2026 Tsukune Server</p>
-            <div className="mt-4 flex justify-center gap-4">
+            <div className="mt-4 flex justify-center gap-4 ">
               <a
                 href="https://github.com/Tsukune-is-yummy"
                 className="hover:underline"
