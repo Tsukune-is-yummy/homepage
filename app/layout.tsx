@@ -49,16 +49,16 @@ export default function RootLayout({
             {/* 右側のナビゲーションメニュー */}
             <nav className="flex justify-end text-sm font-medium">
               <Link href="/" className={linkStyle}>
-                トップ
+                Top
               </Link>
               <Link href="/blog" className={linkStyle}>
-                ブログ
+                Blog
               </Link>
               <Link href="/about" className={linkStyle}>
                 About
               </Link>
               <Link href="/server" className={linkStyle}>
-                サーバー
+                MCServer
               </Link>
               <Link href="/contact" className={linkStyle}>
                 Contact
@@ -76,8 +76,17 @@ export default function RootLayout({
               <a href="https://github.com/..." className="hover:underline">
                 GitHub
               </a>
-              <a href="https://youtube.com/" className="hover:underline">
-                YouTube
+              <a
+                href="https://www.youtube.com/@Tsukune-ch506"
+                className="hover:underline"
+              >
+                YouTube-メイン
+              </a>
+              <a
+                href="https://www.youtube.com/@Tsukune-main"
+                className="hover:underline"
+              >
+                YouTube-サブ
               </a>
             </div>
           </div>
