@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@theme {
+    --font-sans:
+        var(--font-open-sans), var(--font-geist-sans), ui-sans-serif, system-ui;
+    --font-mochiy: var(--font-mochiy);
+}
 
 :root {
     --background: #ffffff;

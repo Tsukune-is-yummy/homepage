@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Mochiy_Pop_One, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,6 +12,17 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const mochiyPopOne = Mochiy_Pop_One({
+  variable: "--font-mochiy",
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
   subsets: ["latin"],
 });
 
@@ -31,7 +42,7 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased `}
+      className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} ${mochiyPopOne.variable} h-full antialiased `}
     >
       <body className="flex flex-col bg-gray-200 text-bg-black antialiased">
         {/* --- ヘッダー --- */}
@@ -47,7 +58,7 @@ export default function RootLayout({
               />
             </Link>
             {/* 右側のナビゲーションメニュー */}
-            <nav className="flex justify-end text-sm font-medium">
+            <nav className="font-mono flex justify-end text-sm font-normal">
               <Link href="/" className={linkStyle}>
                 Top
               </Link>
@@ -69,12 +80,21 @@ export default function RootLayout({
 
         <main className="w-full">{children}</main>
 
-        <footer className="border-t bg-white py-10 mt-20">
+        <footer className="border-t bg-gray-100 py-15 mt-40">
           <div className="mx-auto max-w-5xl px-4 text-center text-gray-500">
             <p>© 2026 Tsukune Server</p>
             <div className="mt-4 flex justify-center gap-4">
-              <a href="https://github.com/..." className="hover:underline">
-                GitHub
+              <a
+                href="https://github.com/Tsukune-is-yummy"
+                className="hover:underline"
+              >
+                GitHub(404)
+              </a>
+              <a
+                href="https://hub.okayu-lab.dev/Tsukune_506"
+                className="hover:underline"
+              >
+                おかゆの開発拠点
               </a>
               <a
                 href="https://www.youtube.com/@Tsukune-ch506"
