@@ -1,1 +1,16 @@
-[{"title":"はじめまして！","slug":"aboutme","date":"2026-05-10T00:00:00.000Z","content":"<p>初めまして！\r\n<br>\r\nサーバー管理者のつくねと申します！</p>","permalink":"/blog/aboutme"},{"title":"No.01 初ブログ","slug":"hello","date":"2026-05-10T00:00:00.000Z","content":"<p>Tailwind CSSのてすとでやんす\r\n<br></p>\n<h2>見出してすと</h2>\n<ul>\n<li>箇条書き</li>\n<li>テ</li>\n<li>ス</li>\n<li>ト</li>\n<li>♡</li>\n</ul>\n<p><strong>太字のテスト</strong>\r\n<br>\r\n<a href=\"https://tsukuneserver.xyz\">home</a>リンクのてーすと</p>","permalink":"/blog/hello"}]
+[
+  {
+    "title": "はじめまして！",
+    "slug": "aboutme",
+    "date": "2026-05-10T00:00:00.000Z",
+    "content": "<p>初めまして！\r\n<br>\r\nサーバー管理者のつくねと申します！</p>",
+    "permalink": "/blog/aboutme"
+  },
+  {
+    "title": "No.01 初ブログ",
+    "slug": "hello",
+    "date": "2026-05-10T00:00:00.000Z",
+    "content": "<p>Tailwind CSSのてすとでやんす\r\n<br></p>\n<h2>見出してすと</h2>\n<ul>\n<li>箇条書き</li>\n<li>テ</li>\n<li>ス</li>\n<li>ト</li>\n<li>♡</li>\n</ul>\n<p><strong>太字のテスト</strong>\r\n<br>\r\n<a href=\"https://tsukuneserver.xyz\">home</a>リンクのてーすと</p>",
+    "permalink": "/blog/hello"
+  }
+]

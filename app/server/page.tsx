@@ -8,7 +8,7 @@ export default function about() {
       <div className="mx-auto max-w-250 max-h-150 mt-5 rounded-xl border border-gray-200 bg-gray-400/40 p-1 shadow-2xl">
         <div className="min-h-200 text-gray-300">
           <p className="mt-4 text-3xl text-white font-sans flex justify-center font-bold">
-            つくねのサーバーへようこそ！
+            つくねのMinecraftサーバーへようこそ！
           </p>
           <Link
             href="/"
@@ -16,26 +16,22 @@ export default function about() {
           >
             <Image
               loading="eager"
-              src="/tsukune.webp"
+              src="/server.webp"
               alt="Tsukune"
-              width={670}
-              height={670}
+              width={964}
+              height={330}
               priority
-              className="w-60 h-60 object-cover max-w-none"
+              className="w-150 h-50 object-cover max-w-none"
             />
           </Link>
-          <p className="font-sans mt-6 text-2xl text-white font-stretch-normal flex justify-start mx-6">
-            はじめまして！
+          <p className="font-sans font-stretch-normal mt-6 text-2xl text-white flex justify-start mx-6">
+            つくねのMinecraftサーバーへようこそ
             <br />
-            管理者のつくねと申します！
+            管理者のつくねです。
             <br />
-            私は学生です。
+            現在、お問い合わせでのみの運営となっております
             <br />
-            VRChatやMinecraftを趣味としています。
-            <br />
-            Minecraftでサーバーを立てています。
-            <br />
-            最近では、Pythonで提出物通知システムを作成しています。
+            ご了承ください。
           </p>
         </div>
       </div>
