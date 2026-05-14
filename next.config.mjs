@@ -1,9 +1,16 @@
 /** @type {import('next').NextConfig} */
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const isBuild = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   reactStrictMode: true,
+  // velite をサーバーバンドルから除外する（self is not defined 対策）
+  serverExternalPackages: ["velite"],
   // `output: "export"` は静的ビルド時のみ有効にする
   // dev モードで有効にすると dynamic routes が404になるため
   ...(isBuild && { output: "export" }),
@@ -12,6 +19,10 @@ const nextConfig = {
     unoptimized: isBuild,
   },
   webpack: (config) => {
+    // tsconfig.json の paths をWebpackに伝える
+    // "content" -> ".velite" のエイリアスがないと self is not defined エラーになる
+    config.resolve.alias["content"] = path.resolve(__dirname, ".velite");
+
     config.plugins.push(new VeliteWebpackPlugin());
     return config;
   },

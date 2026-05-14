@@ -4,7 +4,6 @@ import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
 
-export const runtime = "edge";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
