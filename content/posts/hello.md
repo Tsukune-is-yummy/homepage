@@ -1,5 +1,5 @@
 ---
-title: No.01 初ブログ
+title: No.001 初ブログ
 date: 2026-05-10
 slug: hello
 ---
