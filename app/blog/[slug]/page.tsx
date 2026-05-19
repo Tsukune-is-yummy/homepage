@@ -19,12 +19,12 @@ export default async function PostPage({
   }
 
   return (
-    <article className="ml-5 container py-10 text-black">
+    <article className="ml-5 container py-10 text-white">
       <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-      <p className="text-gray-900 mb-8">{post.date}</p>
+      <p className="text-gray-200 mb-8">{post.date}</p>
       <hr className="mb-8" />
       <div
-        className="prose prose-slate max-w-none"
+        className="prose prose-slate max-w-none text-white"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
     </article>

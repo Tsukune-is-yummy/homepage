@@ -20,7 +20,7 @@ export default function Home() {
           />
         </Link>
 
-        <p className="font-mono flex justify-start text-4xl text-white font-extrabold mx-auto mt-10 max-w-250">
+        <p className="font-sans flex justify-start text-4xl font-extrabold text-white mx-auto mt-10 max-w-250">
           もくじ
         </p>
 

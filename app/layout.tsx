@@ -77,7 +77,7 @@ export default function RootLayout({
           </div>
         </header>
 
-        <main className="w-full">{children}</main>
+        <main className="w-full bg-zinc-900 text-white">{children}</main>
 
         <footer className="bg-gray-950 py-15">
           <div className="mx-auto max-w-5xl px-4 text-center text-white">
