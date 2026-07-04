@@ -17,13 +17,17 @@ export default function Home() {
             className="w-full h-auto object-cover max-w-none"
           />
         </Link>
-        <div className="mx-auto max-w-4xl max-h-50 my-5 flex justify-center rounded-lg border border-zinc-700 bg-zinc-800/50 py-10 px-6 shadow-xl">
-          <div className="min-h-100 text-gray-300">
-            <p className="text-xl md:text-3xl font-mochiy leading-relaxed">
+        <div className="mx-auto max-w-4xl my-5 flex justify-center rounded-lg border border-zinc-700 bg-zinc-800/50 py-10 px-6 shadow-xl">
+          <div className="text-center w-full text-gray-300">
+            <p className="text-xl md:text-3xl font-mochiy leading-relaxed font-extrabold">
               つくねのサーバーへようこそ！
             </p>
-            <p className="text-xl md:text-3xl font-mochiy leading-relaxed">
-              ここは 管理者：つくね が運営しているつくねサーバーです！
+            <p className="text-xs md:text-2xl p-2 font-mochiy leading-relaxed font-extralight">
+              ここは管理者「つくね」が夜な夜なポチポチ開発・運営している,
+              <br />
+              存続が危ぶまれているサーバーです。
+              <br />
+              他にもいろんなことしてます,詳しくはAboutページまで。
             </p>
           </div>
         </div>
@@ -33,7 +37,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 max-w-5xl mx-auto px-4 w-full">
           <Link
             href="/blog"
-            className="block p-5 rounded-lg border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-700 hover:border-zinc-900/80 transition-all duration-300 ease-in-out"
+            className="block p-8 rounded-lg border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-700 hover:border-zinc-900/80 transition-all duration-300 ease-in-out"
           >
             <span className="block text-xl font-bold text-white">Blog</span>
             <span className="block text-xs text-zinc-400 mt-1">
@@ -43,7 +47,7 @@ export default function Home() {
 
           <Link
             href="/about"
-            className="block p-5 rounded-lg border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-700 hover:border-zinc-900/80 transition-all duration-300 ease-in-out"
+            className="block p-8 rounded-lg border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-700 hover:border-zinc-900/80 transition-all duration-300 ease-in-out"
           >
             <span className="block text-xl font-bold text-white">About</span>
             <span className="block text-xs text-zinc-400 mt-1">
@@ -53,7 +57,7 @@ export default function Home() {
 
           <Link
             href="/server"
-            className="block p-5 rounded-lg border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-700 hover:border-zinc-900/80 transition-all duration-300 ease-in-out"
+            className="block p-8 rounded-lg border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-700 hover:border-zinc-900/80 transition-all duration-300 ease-in-out"
           >
             <span className="block text-xl font-bold text-white">
               Minecraft Server
@@ -65,7 +69,7 @@ export default function Home() {
 
           <Link
             href="/contact"
-            className="block p-5 rounded-lg border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-700 hover:border-zinc-900/80 transition-all duration-300 ease-in-out"
+            className="block p-8 rounded-lg border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-700 hover:border-zinc-900/80 transition-all duration-300 ease-in-out"
           >
             <span className="block text-xl font-bold text-white">Contact</span>
             <span className="block text-xs text-zinc-400 mt-1">
