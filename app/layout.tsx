@@ -26,7 +26,7 @@ const openSans = Open_Sans({
 });
 
 const linkStyle =
-  "border-2 border-gray-800 px-4 py-2 text-white no-underline hover:bg-white hover:text-black transition-all font-bold";
+  "border-2 border-zinc-800 px-4 py-2 text-white no-underline hover:bg-white hover:text-black transition-all font-bold";
 
 export const metadata: Metadata = {
   title: "Tsukuneserver Home",
@@ -43,11 +43,18 @@ export default function RootLayout({
       lang="ja"
       className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} ${mochiyPopOne.variable} h-full antialiased bg-black text-white selection:bg-amber-950`}
     >
-      <body className="bg-gray-800 text-white antialiased border-gray-900">
+      <body className="bg-zinc-800/50 text-white antialiased border-zinc-900">
         {/* --- ヘッダー --- */}
-        <header className="border border-gray-900 p-4 bg-gray-800">
-          <div className="flex justify-between items-center bg-gray-800">
-            <Link href="/" className="flex justify-items-center border ">
+        {/* --- ヘッダー --- */}
+        {/* 🍏 md:px-8 などを追加し、全体の横幅がはみ出さないように制限をかけました */}
+        <header className="border-b border-zinc-900 px-4 md:px-8 py-4 bg-zinc-800 w-full overflow-hidden">
+          {/* 🍏 max-w-5xl で全体の幅を中央寄せに統一し、flex-wrap ではなく min-w-0 を使って潰れを防ぎます */}
+          <div className="mx-auto max-w-5xl flex justify-between items-center bg-zinc-800 gap-4 min-w-0">
+            {/* ロゴエリア（縮まないように flex-shrink-0 を指定） */}
+            <Link
+              href="/"
+              className="flex justify-items-center border flex-shrink-0"
+            >
               <Image
                 src="/newlogo.webp"
                 alt="tsukuneserver_Logo"
@@ -56,30 +63,40 @@ export default function RootLayout({
                 className="h-12.5 w-auto"
               />
             </Link>
-            {/* 右側のナビゲーションメニュー */}
-            <nav className="font-mono flex justify-end text-sm font-normal">
-              <Link href="/" className={linkStyle}>
-                Top
-              </Link>
-              <Link href="/blog" className={linkStyle}>
-                Blog
-              </Link>
-              <Link href="/about" className={linkStyle}>
-                About
-              </Link>
-              <Link href="/server" className={linkStyle}>
-                MCServer
-              </Link>
-              <Link href="/contact" className={linkStyle}>
-                Contact
-              </Link>
-            </nav>
+
+            {/* 右側のナビゲーションメニュー（🍏 親の枠を超えて正しくスクロールを有効化） */}
+            {/* 🍏 navをdivで囲み、ここを相対配置(relative)にして影を表示させます */}
+            <div className="relative flex-1 min-w-0">
+              <nav className="flex items-center gap-2 sm:gap-4 overflow-x-auto whitespace-nowrap scrollbar-none py-1 justify-start md:justify-end">
+                <Link href="/" className={linkStyle}>
+                  Top
+                </Link>
+                <Link href="/blog" className={linkStyle}>
+                  Blog
+                </Link>
+                <Link href="/about" className={linkStyle}>
+                  About
+                </Link>
+                <Link href="/server" className={linkStyle}>
+                  Server
+                </Link>
+                <Link href="/specs" className={linkStyle}>
+                  Specs
+                </Link>
+                <Link href="/contact" className={linkStyle}>
+                  Contact
+                </Link>
+              </nav>
+
+              {/* 🍏 右端の影（右側に薄く黒いグラデーションを配置） */}
+              <div className="pointer-events-none absolute right-0 top-0 h-full w-9 bg-gradient-to-l from-zinc-900 to-transparent md:hidden" />
+            </div>
           </div>
         </header>
 
         <main className="w-full bg-zinc-900 text-white">{children}</main>
 
-        <footer className="bg-gray-950 py-15">
+        <footer className="bg-zinc-950 py-15">
           <div className="mx-auto max-w-5xl px-4 text-center text-white">
             <p>© 2026 Tsukune Server</p>
             <div className="mt-4 flex justify-center gap-4 ">
@@ -87,7 +104,7 @@ export default function RootLayout({
                 href="https://github.com/Tsukune-is-yummy"
                 className="hover:underline"
               >
-                GitHub(404)
+                GitHub
               </a>
               <a
                 href="https://hub.okayu-lab.dev/Tsukune_506"
@@ -96,16 +113,10 @@ export default function RootLayout({
                 おかゆの開発拠点
               </a>
               <a
-                href="https://www.youtube.com/@Tsukune-ch506"
-                className="hover:underline"
-              >
-                YouTube-メイン
-              </a>
-              <a
                 href="https://www.youtube.com/@Tsukune-main"
                 className="hover:underline"
               >
-                YouTube-サブ
+                YouTube
               </a>
             </div>
           </div>

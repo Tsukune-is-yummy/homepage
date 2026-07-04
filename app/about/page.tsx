@@ -85,6 +85,15 @@ export default function About() {
             <div className="space-y-4 text-xl md:text-lg leading-relaxed font-light">
               <span className="text-white font-bold">サーバー</span> :
               メインPCをサーバー用途に使用してます (あぶない)
+              <br />
+              もしお時間があれば
+              <Link
+                href="/specs"
+                className="text-white underline hover:text-zinc-300 transition-colors"
+              >
+                Specs
+              </Link>
+              ページもご覧下さい。
             </div>
           </div>
         </div>
