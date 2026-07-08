@@ -41,7 +41,7 @@ export default function Server() {
             </h2>
             <div className="bg-zinc-900/80 border border-zinc-800 p-6 rounded-xl text-center space-y-2">
               <p className="text-2xl font-light text-amber-400 font-mochiy">
-                現在、完全招待（お問い合わせ）制でひっそり運営中
+                現在、お問い合わせ制でひっそり運営中,最近はテスト運営してる
               </p>
               <p className="text-sm text-zinc-400 font-light">
                 管理者のサーバーはサーバー用PCがあるのではなくメインPCでサーバーを動かすので、現在は一般公開していません。
@@ -67,7 +67,7 @@ export default function Server() {
                   Java版 ＆ 統合版
                 </span>
                 <span className="block text-xs text-zinc-400 mt-1">
-                  GeyserMC x Spigot PlugInによる
+                  GeyserMC x Spigot Pluginによる
                   <br />
                   クロスプレイ対応
                 </span>
