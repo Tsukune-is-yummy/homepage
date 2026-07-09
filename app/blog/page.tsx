@@ -1,4 +1,10 @@
 // app/blog/page.tsx
+
+export const metadata = {
+  title: "Blog | Tsukune Server",
+  description: "Tsukune ServerのBlogのトップページです。",
+};
+
 import { posts } from "content";
 import Link from "next/link";
 

@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Contact | Tsukune Server",
+  description: "Tsukune Serverの問い合わせページです。",
+};
+
 import Link from "next/link";
 
 export default function Contact() {

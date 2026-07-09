@@ -1,3 +1,9 @@
+
+export const metadata = {
+  title: "Specs | Tsukune Server",
+  description: "Tsukune Serverのスペックページです。",
+};
+
 import Link from "next/link";
 
 export default function SpecsPage() {

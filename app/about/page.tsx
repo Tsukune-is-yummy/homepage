@@ -1,5 +1,11 @@
+export const metadata = {
+  title: "About | Tsukune Server",
+  description: "Tsukune ServerのAboutページです。",
+};
+
 import Link from "next/link";
 import Image from "next/image";
+
 
 export default function About() {
   return (

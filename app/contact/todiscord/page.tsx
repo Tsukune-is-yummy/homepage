@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Redirecting to Discord | Tsukune Server",
+  description: "Tsukune ServerのDiscordへのリダイレクトページです。",
+};
 import { redirect } from "next/navigation";
 
 export default function DiscordRedirect() {

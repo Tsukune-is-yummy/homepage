@@ -1,4 +1,9 @@
 // Gemini 100%使用 ここに関しては私の敗北.......
+export const metadata = {
+  title: "Blog | Tsukune Server",
+  description: "Tsukune ServerのBlogページです。",
+};
+
 import { posts } from "content";
 import { notFound } from "next/navigation";
 import Link from "next/link";
