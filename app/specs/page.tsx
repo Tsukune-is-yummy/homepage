@@ -14,10 +14,10 @@ export default function SpecsPage() {
     { label: "RAM", value: "32GB DDR5-5600" },
     { label: "M.2 SSD", value: "Samsung 990 PRO 1TB " },
     { label: "SATA SSD", value: "Transcend SSD 500GB (SSD220S)" },
-    { label: "SATA HDD", value: "Western Digital WD Blue 500GB(WD5000LPVT)" },
-    { label: "OS", value: "Arch Linux (ROCm Environment)" },
+    { label: "SATA HDD", value: "Western Digital3 Blue 500GB(WD5000LPVT)" },
+    { label: "OS", value: "Arch Linux" },
     { label: "VR Headset", value: "Meta Quest 3" },
-    { label: "Full Body Tracking", value: "SlimeVR Tracking" },
+    { label: "Full Body Tracking", value: "ぽてとら(強化版)(SlimeVR Tracking)" },
   ];
 
   // サーバーマシンのスペックデータ
@@ -29,7 +29,7 @@ export default function SpecsPage() {
     { label: "Server Software", value: "PaperMC / GeyserMC" },
     {
       label: "Network",
-      value: "Cloudflare Tunnel / Cloudflare Workers(Pages)",
+      value: "Direct Port Open　(Minecraft)",
     },
     { label: "Cooling System", value: "扇風機 + 外気" }, // 👈 例のあの扇風機！
   ];
