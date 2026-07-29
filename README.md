@@ -1,4 +1,4 @@
-This is a Next.js project bootstrapped with `create-next-app`.
+This is a Next.js project bootstrapped with `create-next-app@latest`.
 
 # Tsukune Homepage v2
 Next.jsとTailwind CSS v4で構築された個人用・ポートフォリオ用のホームページのリポジトリです。
