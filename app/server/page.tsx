@@ -1,3 +1,9 @@
+
+export const metadata = {
+  title: "Minecraft Server | Tsukune Server",
+  description: "Tsukune ServerのMinecraftサーバーページです。",
+};
+
 import Link from "next/link";
 import Image from "next/image";
 

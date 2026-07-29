@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://tsukuneserver.xyz/sitemap.xml',
+    sitemap: 'https://tsukuneserver.xyz/sitemap.xml?v=2',
   }
 }
