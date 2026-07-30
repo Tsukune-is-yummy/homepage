@@ -7,6 +7,7 @@ export const metadata = {
 import { posts } from "content";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image"; // 🍏 画像コンポーネントを追加！
 import ShareButtons from "./ShareButtons"; // 🍏 迷子にならない正しい相対パス！
 
 // 静的エクスポート用: ビルド時に全slugを列挙する
@@ -26,6 +27,15 @@ export default async function PostPage({
     notFound();
   }
 
+  // 🍏 ISO日付表記 (2026-07-31T00:00:00.000Z) を "2026.07.31" 風に綺麗に整える
+  const formattedDate = new Date(post.date)
+    .toLocaleDateString("ja-JP", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    })
+    .replaceAll("/", ".");
+
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
       <main className="w-full flex-1 pb-24 px-4">
@@ -44,12 +54,28 @@ export default async function PostPage({
           {/* 記事ヘッダー：メタ情報 */}
           <header className="mb-8 border-b border-zinc-700/50 pb-6">
             <time className="block text-sm font-mono text-zinc-500 mb-2">
-              {post.date}
+              {formattedDate}
             </time>
             <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight text-white font-sans leading-tight">
               {post.title}
             </h1>
           </header>
+
+          {/* 🍏 カバー画像（post.cover が存在する場合のみ表示） */}
+          {post.cover && (
+            <div className="mb-8 overflow-hidden rounded-lg border border-zinc-700/60 shadow-lg">
+              <Image
+                src={post.cover.src}
+                alt={post.title}
+                width={post.cover.width}
+                height={post.cover.height}
+                blurDataURL={post.cover.blurDataURL}
+                placeholder="blur"
+                className="w-full h-auto object-cover"
+                priority
+              />
+            </div>
+          )}
 
           {/* 記事本文：VeliteのHTMLコンテンツ */}
           <div

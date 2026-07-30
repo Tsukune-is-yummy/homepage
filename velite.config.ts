@@ -2,7 +2,7 @@
 import { defineConfig, s } from 'velite'
 
 export default defineConfig({
-  root: 'content', // 記事ファイルを置くディレクトリ
+  root: 'content',
   output: {
     data: '.velite',
     assets: 'public/static',
@@ -13,14 +13,16 @@ export default defineConfig({
   collections: {
     posts: {
       name: 'Post',
-      pattern: 'posts/**/*.md', // content/posts 以下のmdファイルを対象にする
+      pattern: 'posts/**/*.md',
       schema: s
         .object({
           title: s.string().max(99),
-          slug: s.slug('posts'), // ファイル名などからURLスラッグを生成
+          slug: s.slug('posts'),
           date: s.isodate(),
           description: s.string().max(200).optional(),
-          content: s.markdown(), // MarkdownをHTMLに変換
+          // ↓ カバー画像用のフィールドを追加（optionalにしておくと画像がない記事があってもエラーになりません）
+          cover: s.image().optional(),
+          content: s.markdown(),
         })
         .transform(data => ({ ...data, permalink: `/blog/${data.slug}` }))
     }
