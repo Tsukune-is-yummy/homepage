@@ -1,9 +1,9 @@
 ---
-title: No.005 「型が不明」なsitemap.xmlと数週間格闘したっていう話
+title: No.004 「型が不明」なsitemap.xmlと数週間格闘したっていう話
 date: 2026-07-31
 slug: sitemap-trouble
 description: "型が不明なsitemap.xmlの解決方法"
-cover: "./cover.png"
+cover: "./cover004.png"
 ---
 # 「型が不明」なsitemap.xmlと数週間格闘したっていう話
 
@@ -13,7 +13,7 @@ Cloudflare Pagesでホストしている自分のサイト(Next.js製)で、Goog
 
 とりあえずブラウザで `https://tsukuneserver.xyz/sitemap.xml` を開いてみる。普通にXMLが表示される。curlでも叩いてみる。200 OK。Googlebotのユーザーエージェントを偽装しても問題なく取得できる。
 
-「じゃあ何が悪いんだ……」
+「じゃあ何が悪いんですか……」
 
 これが数週間続く戦いの始まりだった。
 
@@ -97,3 +97,7 @@ robots.tsの `sitemap:` フィールドも同じURLに合わせて更新して�
 4. **Google側にも「URL単位のキャッシュされた失敗」がある** — 技術的に完璧に直しても解消しないことがあり、その場合はURLそのものを変えて再評価させるのが有効な回避策になる
 
 自分の設定ミスを疑うだけでなく、「Google側が引きずっている可能性」まで視野に入れないと、永遠にイライラし続けることになっていたかもしれない。
+
+
+
+Authored by Tsukune.
