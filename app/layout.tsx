@@ -94,11 +94,17 @@ export default function RootLayout({
                 <Link href="/server" className={linkStyle}>
                   Server
                 </Link>
+                <Link href="/counter" className={linkStyle}>
+                  Counter
+                </Link>
                 <Link href="/specs" className={linkStyle}>
                   Specs
                 </Link>
                 <Link href="/contact" className={linkStyle}>
                   Contact
+                </Link>
+                <Link href="/privacy" className={linkStyle}>
+                  Policy
                 </Link>
               </nav>
 
