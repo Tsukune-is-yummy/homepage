@@ -68,14 +68,45 @@ export default function Home() {
           </Link>
 
           <Link
+            href="/specs"
+            className="block p-8 rounded-lg border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-700 hover:border-zinc-900/80 transition-all duration-300 ease-in-out"
+          >
+            <span className="block text-xl font-bold text-white">Specs</span>
+            <span className="block text-xs text-zinc-400 mt-1">
+              サーバーのスペック
+            </span>
+          </Link>
+
+          <Link
+            href="/counter"
+            className="block p-8 rounded-lg border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-700 hover:border-zinc-900/80 transition-all duration-300 ease-in-out"
+          >
+            <span className="block text-xl font-bold text-white">Counter</span>
+            <span className="block text-xs text-zinc-400 mt-1">
+              このサイトへのアクセス記録
+            </span>
+          </Link>
+
+          <Link
             href="/contact"
             className="block p-8 rounded-lg border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-700 hover:border-zinc-900/80 transition-all duration-300 ease-in-out"
           >
             <span className="block text-xl font-bold text-white">Contact</span>
             <span className="block text-xs text-zinc-400 mt-1">
-              お問い合わせ
+              つくねへのお問い合わせ
             </span>
           </Link>
+
+          <Link
+            href="/policy"
+            className="block p-8 rounded-lg border border-zinc-800 bg-zinc-900/50 hover:bg-zinc-700 hover:border-zinc-900/80 transition-all duration-300 ease-in-out"
+          >
+            <span className="block text-xl font-bold text-white">Policy</span>
+            <span className="block text-xs text-zinc-400 mt-1">
+              サーバーのプライバシーポリシー
+            </span>
+          </Link>
+
         </div>
       </main>
     </div>

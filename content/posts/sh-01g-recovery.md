@@ -1,6 +1,6 @@
 ---
 title: No.006 AQUOS ZETA SH-01Gについて語る
-date: 2026-08-14
+date: 2026-08-13
 slug: sh-01g-recovery
 description: "SH-01GのRecoverymodeについて"
 cover: "./cover006.png"
@@ -19,7 +19,7 @@ SH-01Gは2014年秋に発売されたSnapdragon 801を載せた32bitハイエン
 
 ## 事件発生　＆　端末の初期化まで
 作業に取り掛かるときカスタムロムを入れようと思ったがここで事件発生  
-TWRP(※1)がこの端末にないどころかネットではRecoveryMode(※2)でさえも**入ることができない**と書かれていました  
+TWRP[^1]がこの端末にないどころかネットではRecoveryMode[^2]でさえも**入ることができない**と書かれていました  
 以前自分のスマホがなかった時代にこの端末を使用していたのですが、親に隠されたっきり使っていないのでパスワードも覚えていないんですよね。   
 そこでサードパーティ製のロック解除ソフトウェアを使用しようと思いましたが、AQUOSがそのソフトの製品一覧に**載っていない。**  
 仕方なくRecoveryModeでWipeoutを試みましたが、**電源ボタン** と **音量ボタン-** で12秒ぐらいのバイブレーションがdocomoロゴ表示からずっと繰り返す  
@@ -30,7 +30,7 @@ AIモードもハルシネーションしか起こさなかったので信用し
 [sharp aquos zeta SH-01G recovery - forgot code pattern lock - factory reset](https://www.youtube.com/watch?v=zWUneeZYnPQ)
 <div className="aspect-video w-full">
   <iframe
-    src="https://www.youtube-nocookie.com/embed/zWUneeZYnPQ"
+    src="https://www.youtube.com/embed/zWUneeZYnPQ"
     title="YouTube video player"
     className="w-full h-full"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -52,9 +52,9 @@ AIモードもハルシネーションしか起こさなかったので信用し
 音量キーで wipe data/factory reset にカーソルを合わせ、電源キー長押しで決定する
 ```
 
-※1 Team Win Recovery Project (TWRP) はAndroidをベースとしたデバイス向けのフリーでオープンソースなAndroid端末など公式リカバリモードを置き換える、サードパーティ製の**拡張修復・管理プログラム**である。  
+[^1]:Team Win Recovery Project (TWRP) はAndroidをベースとしたデバイス向けのフリーでオープンソースなAndroid端末など公式リカバリモードを置き換える、サードパーティ製の**拡張修復・管理プログラム**である。  
 出典 [Wikipedia](https://ja.wikipedia.org/wiki/Team_Win_Recovery_Project)  
-※2　その名の通り緊急復旧モードである、非常時にこのように初期化が行うことができる  
+[^2]:その名の通り緊急復旧モードである、非常時にこのように初期化が行うことができる  
 
 ## 大きな制約
 最新アップデートを迎えたこのSH-01GはAndroid 4.4(KitKat)からAndroid 5.0.2(Lollipop)にアップデートされました。
@@ -67,12 +67,12 @@ Play Storeがサーバーが応答しなくてしばらくして出てくる利�
 ## なぜカスタムロムが導入できないのか
 結論からいうと、この端末は国内版のみしか販売されていなくTWRPの有志ニキたちにとってその端末ごとのTWRPを作成する必要がなかったから。  
 要は需要がなかったんですね。  
-それに加え、開発元のSharpが提供しているデベロッパーツール(※3)はもうリンクが切れていますし、Root化記事(※4)も見つけましたがリンク先がもう切れてる  
+それに加え、開発元のSharpが提供しているデベロッパーツール[^3]はもうリンクが切れていますし、Root化記事[^4]も見つけましたがリンク先がもう切れてる  
 ハードウェアベースでSharpがロックを掛けブートローダーアンロックができなかったり、TWRP入れられなかったので今回は**諦めました**  
 今回の原因は時間が遅かったんですねなにせ2014年の端末ですからまぁしょうがないです
 
-※3 [Sharp Developper Tool_Not Found](https://sh-dev.sharp.co.jp/android/)  
-※4 [SH-01G root化 wiki](https://androidrooting.wiki.fc2.com/wiki/DOCOMO%20SHARP%20AQUOS%20ZETA%20SH-01G%20root%E5%8C%96%20wiki)
+[^3]:[Sharp Developper Tool_Not Found](https://sh-dev.sharp.co.jp/android/)  
+[^4]:[SH-01G root化 wiki](https://androidrooting.wiki.fc2.com/wiki/DOCOMO%20SHARP%20AQUOS%20ZETA%20SH-01G%20root%E5%8C%96%20wiki)
 
 ### SH-01Gの今後の向き合い方
 Geminiと相談してみると、常時点灯するスマートデバイス化やポータブル音楽プレイヤーとしての活用がいいんじゃないかなって僕は思います  

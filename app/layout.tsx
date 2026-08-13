@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, Mochiy_Pop_One, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script"; // 🍏 GA4用に追加
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,9 +29,37 @@ const openSans = Open_Sans({
 const linkStyle =
   "border-2 border-zinc-800 px-4 py-2 text-white no-underline hover:bg-white hover:text-black transition-all font-bold";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tsukuneserver.xyz";
+
 export const metadata: Metadata = {
-  title: "Tsukuneserver Home",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Tsukuneserver Home",
+    template: "%s | Tsukune Server",
+  },
   description: "Tsukune Server / Created With Next.js+TailwindCSS/PostCSS",
+
+  // RSSの自動発見タグ設定
+  alternates: {
+    types: {
+      "application/rss+xml": `${siteUrl}/rss.xml`,
+    },
+  },
+
+  // OGP（SNS共有設定）
+  openGraph: {
+    title: "Tsukuneserver",
+    description: "Tsukune Server / Created With Next.js+TailwindCSS/PostCSS",
+    url: siteUrl,
+    siteName: "Tsukuneserver",
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tsukuneserver",
+    description: "Tsukune Server / Created With Next.js+TailwindCSS/PostCSS",
+  },
 };
 
 export default function RootLayout({
@@ -44,7 +72,7 @@ export default function RootLayout({
       lang="ja"
       className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} ${mochiyPopOne.variable} h-full antialiased bg-black text-white selection:bg-amber-950`}
     >
-      {/* 🍏 GA4用のスクリプトを追加 */}
+      {/* GA4用のスクリプト */}
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-8LYQ6JJ08Q"
@@ -118,7 +146,7 @@ export default function RootLayout({
         <footer className="bg-zinc-950 py-15">
           <div className="mx-auto max-w-5xl px-4 text-center text-white">
             <p>© 2026 Tsukune Server</p>
-            <div className="mt-4 flex justify-center gap-4 ">
+            <div className="mt-4 flex justify-center gap-4 flex-wrap">
               <a
                 href="https://github.com/Tsukune-is-yummy"
                 className="hover:underline"
@@ -136,6 +164,15 @@ export default function RootLayout({
                 className="hover:underline"
               >
                 YouTube
+              </a>
+              {/* RSSリンクをフッターに追加 */}
+              <a
+                href="/rss.xml"
+                className="hover:underline text-amber-500"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                RSS
               </a>
             </div>
           </div>
