@@ -1,18 +1,58 @@
-// Gemini 100%使用 ここに関しては私の敗北.......
-export const metadata = {
-  title: "Blog | Tsukune Server",
-  description: "Tsukune ServerのBlogページです。",
-};
-
 import { posts } from "content";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image"; // 🍏 画像コンポーネントを追加！
-import ShareButtons from "./ShareButtons"; // 🍏 迷子にならない正しい相対パス！
+import Image from "next/image";
+import ShareButtons from "./ShareButtons";
+import type { Metadata } from "next";
 
 // 静的エクスポート用: ビルド時に全slugを列挙する
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
+}
+
+// 🍏 OGPおよびメタデータを記事ごとに動的生成
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = posts.find((p) => p.slug === slug);
+
+  if (!post) return {};
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tsukuneserver.xyz";
+  const defaultOgImage = `${siteUrl}/og-default.png`; // カバー画像がない場合のフォールバック画像
+
+  // post.cover.src（/static/xxx.png）が存在すれば絶対パス化
+  const ogImageUrl = post.cover?.src
+    ? `${siteUrl}${post.cover.src}`
+    : defaultOgImage;
+
+  return {
+    title: `${post.title} | Tsukune Server`,
+    description: post.description || "Tsukune ServerのBlogページです。",
+    openGraph: {
+      title: post.title,
+      description: post.description || "Tsukune ServerのBlogページです。",
+      type: "article",
+      url: `${siteUrl}/blog/${post.slug}`,
+      images: [
+        {
+          url: ogImageUrl,
+          width: post.cover?.width || 1200,
+          height: post.cover?.height || 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description || "Tsukune ServerのBlogページです。",
+      images: [ogImageUrl],
+    },
+  };
 }
 
 export default async function PostPage({
@@ -49,7 +89,7 @@ export default async function PostPage({
           </Link>
         </div>
 
-        {/* 記事のメインコンテナ（読むことに集中できる max-w-3xl） */}
+        {/* 記事のメインコンテナ */}
         <article className="mx-auto max-w-3xl rounded-lg border border-zinc-700 bg-zinc-800/30 p-6 md:p-10 shadow-xl">
           {/* 記事ヘッダー：メタ情報 */}
           <header className="mb-8 border-b border-zinc-700/50 pb-6">
@@ -91,7 +131,6 @@ export default async function PostPage({
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
-          {/* 🍏 XシェアもURLコピーもすべて内蔵した最強コンポーネント（これ1行ですべて完結します！） */}
           <ShareButtons slug={post.slug} title={post.title} />
         </article>
       </main>
